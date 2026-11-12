@@ -1,0 +1,205 @@
+/* Reset */
+
+*
+  { 
+    padding: 0;
+    margin: 0;
+    font-family: "roboto", sans-serif;
+    box-sizing: border-box;
+
+}
+
+/*Variables*/
+
+ :root {
+
+    --main-color: #a660df;
+    --main-text-color: #0e0d0e;
+    --border-color: #a660df;
+    --bio-bg-color: #0a0a03;
+    --bio-border-color: #a660df;
+    --about-bg-color: #161617;
+    
+}
+
+/* General */
+
+.highlight {
+    color: var(--main-color);
+
+}
+
+/*Containers */
+#container {
+    display: flex;
+    flex-direction: row;
+    color: var(--main-text-color);
+}
+    aside {
+    flex: 1 1 20%;
+    display: flex;
+}
+
+#bio-container {
+     flex: 1; 
+    min-height: 100vh;
+    background-color: var(--bio-bg-color);
+    color: #ccd6f6;          
+    text-align: center;
+    padding: 30px 12px;
+    border-right: 5px solid var(--bio-border-color);
+}
+
+#about-container {
+    flex: 1 1 80%;
+    background-color: var(--about-bg-color);
+    color: #ecf1ed;
+    padding: 30px;
+      padding: 60px 50px;
+}
+
+#social-container {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#social-container ion-icon {
+    font-size: 32px;
+    color: var(--main-color);
+}
+
+#email-container {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+}
+
+#email-container a {
+    font-size: 14px;
+}
+
+a {
+    color: inherit;
+
+}
+
+#welcome-text {
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+#bio-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 20px 0;
+
+}
+#btn-projects {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: #a660df;
+    color: #ffffff;
+    border: 2px solid #a660df;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+#btn-projects:hover {
+    background-color: transparent;
+    color: #a660df;
+}
+#title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0 25px;
+}    
+.description {
+    max-width: 1000px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+#skills-section-title {
+    font-size: 36px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 40px;
+    margin-bottom: 20px;
+
+}
+#skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 30px;
+    margin-top: 30px;
+}
+.skills-title {
+    font-size: 22px;
+    font-weight: bold;
+    border-left: 4px solid var(--main-color);
+    padding-left: 12px;
+    margin-bottom: 25px;
+}
+
+.skills-box i {
+    font-size: 50px;
+    margin-right: 12px;
+}
+.skills-box img {
+    width: 50px;
+    height: 50px;
+    margin-right: 12px;
+}
+.devicon-github-plain {
+    color: #a660df;
+}
+
+/* mobile */
+/* ===== MOBILE ===== */
+@media (max-width: 800px) {
+
+    @media (max-width: 800px) {
+
+    #container {
+        flex-direction: column;
+    }
+
+    aside {
+        flex: 0 0 auto;
+        width: 100%;
+        display: block;
+    }
+
+    #bio-container {
+        flex: none;
+        min-height: 0;
+        height: auto;
+        border-right: none;
+        border-bottom: 5px solid var(--bio-border-color);
+        padding: 30px 20px;
+    }
+
+    #about-container {
+        flex: 0 0 auto;
+        width: 100%;
+        padding: 40px 20px;
+        text-align: left;
+    }
+
+    #skills-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+}
+}
+
